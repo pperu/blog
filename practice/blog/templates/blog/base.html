@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <title>Priyanka's Blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div>
+    <div class="page-header"><h1>Welcome!!</h1></div>
+    <h2>Thanks for visiting my blog!!</h2>
+</div>
+
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <h3>Resources</h3>
+    <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Django Wiki</a>
+</div>
+</body>
