@@ -3,7 +3,17 @@
     <title>Priyanka's Blog</title>
 </head>
 <body>
-<h1>Welcome!!</h1>
-<h2>Thanks for visiting my blog!!</h2>
+<div>
+    <h1>Welcome!!</h1>
+    <h2>Thanks for visiting my blog!!</h2>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
